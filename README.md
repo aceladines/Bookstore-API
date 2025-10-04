@@ -1,10 +1,27 @@
 # 📚 Bookstore API
 
+> ⚠️ **Work in Progress** - This project is currently under active development. Features are being implemented incrementally following Clean Architecture principles.
+
 A modern RESTful API for managing a bookstore built with .NET 9 and Clean Architecture principles. This project demonstrates enterprise-level software development practices with comprehensive authentication, authorization, and CRUD operations.
 
 ## 🌟 Overview
 
 The Bookstore API enables users to register, authenticate, browse books, and place orders. It features role-based access control with separate permissions for regular users and administrators, making it suitable for real-world e-commerce scenarios.
+
+### 🚧 Current Development Status
+
+This project is being developed incrementally to sharpen .NET development skills and demonstrate Clean Architecture implementation. The foundation has been established with:
+
+- ✅ **Project Structure**: Clean Architecture layers properly organized
+- ✅ **Domain Layer**: Book entity with business logic implemented
+- ✅ **Infrastructure**: Entity Framework Core setup with SQL Server
+- ✅ **Application Layer**: DTOs for data transfer operations
+- ✅ **API Foundation**: ASP.NET Core Web API with Swagger documentation
+- 🚧 **Authentication**: JWT implementation in progress
+- 🚧 **CRUD Operations**: Book management endpoints in development
+- 🚧 **Order System**: Order management features planned
+
+**Note**: Some features mentioned in this README are planned but not yet implemented. Check the [Upcoming Features](#-upcoming-features) section for the current roadmap.
 
 ## 🏗️ Architecture
 
@@ -32,26 +49,26 @@ test/
 
 ## ✨ Core Features
 
-### 🔐 Authentication & Authorization
+### 🔐 Authentication & Authorization (Planned)
 - User registration and login
 - JWT token-based authentication
 - Role-based access control (User, Admin)
 - Secure password hashing
 
-### 📖 Book Management
-| Method | Endpoint | Description | Access |
-|--------|----------|-------------|--------|
-| `GET` | `/api/books` | List all books with pagination | Public |
-| `GET` | `/api/books/{id}` | Get book details | Public |
-| `POST` | `/api/books` | Add new book | Admin only |
-| `PUT` | `/api/books/{id}` | Update book | Admin only |
-| `DELETE` | `/api/books/{id}` | Delete book | Admin only |
+### 📚 Book Management (In Development)
+| Method | Endpoint | Description | Access | Status |
+|--------|----------|-------------|--------|--------|
+| `GET` | `/api/books` | List all books with pagination | Public | 🚧 Planned |
+| `GET` | `/api/books/{id}` | Get book details | Public | 🚧 Planned |
+| `POST` | `/api/books` | Add new book | Admin only | 🚧 Planned |
+| `PUT` | `/api/books/{id}` | Update book | Admin only | 🚧 Planned |
+| `DELETE` | `/api/books/{id}` | Delete book | Admin only | 🚧 Planned |
 
-### 🛒 Order Management
-| Method | Endpoint | Description | Access |
-|--------|----------|-------------|--------|
-| `POST` | `/api/orders` | Place order for books | Authenticated |
-| `GET` | `/api/orders` | View user's order history | Authenticated |
+### 🛍 Order Management (Planned)
+| Method | Endpoint | Description | Access | Status |
+|--------|----------|-------------|--------|--------|
+| `POST` | `/api/orders` | Place order for books | Authenticated | 🚧 Planned |
+| `GET` | `/api/orders` | View user's order history | Authenticated | 🚧 Planned |
 
 ## 🗃️ Database Schema
 
@@ -85,7 +102,9 @@ Orders
 └── OrderDate (DateTime)
 ```
 
-## 🛠️ Getting Started
+## 🚽️ Getting Started
+
+> ⚠️ **Note**: The application is currently in development. Some setup steps may not work as expected until core features are fully implemented.
 
 ### Prerequisites
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
@@ -141,7 +160,9 @@ dotnet test
 
 The API is documented using OpenAPI/Swagger. When running the application in development mode, navigate to `/swagger` to explore the interactive documentation.
 
-### Sample Requests
+### Sample Requests (Planned)
+
+> ⚠️ **Note**: These endpoints are not yet implemented. They represent the planned API structure.
 
 **Register a new user:**
 ```json
@@ -181,6 +202,16 @@ Authorization: Bearer <jwt_token>
 - [ ] Integration tests
 - [ ] Azure deployment configuration
 - [ ] CI/CD pipeline setup
+
+## 🎯 Development Purpose
+
+This project serves as a practical learning exercise to:
+- **Sharpen .NET development skills** with the latest .NET 9 features
+- **Master Clean Architecture** implementation in real-world scenarios
+- **Practice enterprise patterns** like Repository, CQRS, and DDD
+- **Explore modern development practices** including JWT authentication, API versioning, and comprehensive testing
+
+The incremental development approach allows for focused learning on each architectural layer and design pattern.
 
 ## 🤝 Contributing
 
