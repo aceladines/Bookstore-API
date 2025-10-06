@@ -1,13 +1,16 @@
 ﻿using Bookstore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-public class BookDbContext : DbContext
+namespace Bookstore.Infrastructure.DbContexts
 {
-    public BookDbContext(DbContextOptions<BookDbContext> options) : base(options)
+    public class BookStoreDbContext : DbContext
     {
+        public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options) : base(options)
+        {
+        }
+
+        // Define DbSets for each entity
+        public DbSet<User> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
-
-    // Define DbSets for each entity
-    public DbSet<Book> Books { get; set; }
-
 }

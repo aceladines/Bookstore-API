@@ -1,3 +1,4 @@
+using Bookstore.Infrastructure.DbContexts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<BookDbContext>(options =>
+builder.Services.AddDbContext<BookStoreDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 var app = builder.Build();
