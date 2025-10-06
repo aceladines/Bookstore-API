@@ -15,9 +15,9 @@ This project is being developed incrementally to sharpen .NET development skills
 - ✅ **Project Structure**: Clean Architecture layers properly organized
 - ✅ **Domain Layer**: Book and User entities with comprehensive business logic
 - ✅ **Infrastructure**: Entity Framework Core setup with SQL Server and User support
-- ✅ **Application Layer**: DTOs with comprehensive validation attributes
+- ✅ **Application Layer**: Book DTOs with comprehensive validation attributes
 - ✅ **API Foundation**: ASP.NET Core Web API with Swagger documentation
-- ✅ **Input Validation**: DataAnnotations validation implemented across DTOs
+- ✅ **Input Validation**: DataAnnotations validation implemented for Book DTOs
 - ✅ **Role-Based Design**: User roles (User/Admin) prepared for authorization
 - 🚧 **Authentication**: JWT implementation in progress
 - 🚧 **CRUD Operations**: Book management endpoints in development
@@ -197,10 +197,11 @@ Authorization: Bearer <jwt_token>
 - [x] Domain entities and DTOs
 - [x] Database context setup
 - [x] Enhanced domain entities (User, Book with business logic)
-- [x] Comprehensive DTO validation with DataAnnotations
+- [x] Book DTO validation with DataAnnotations (UpdateBookDto, PartialUpdateBookDto)
 - [x] Role-based access control foundation (User/Admin roles)
 - [x] Improved encapsulation and business methods
 - [ ] JWT Authentication implementation
+- [ ] Authentication DTOs with validation (RegisterDto, LoginDto)
 - [ ] User registration and login endpoints
 - [ ] Books CRUD operations with controllers
 - [ ] Order entity and management system
