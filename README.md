@@ -13,10 +13,12 @@ The Bookstore API enables users to register, authenticate, browse books, and pla
 This project is being developed incrementally to sharpen .NET development skills and demonstrate Clean Architecture implementation. The foundation has been established with:
 
 - ✅ **Project Structure**: Clean Architecture layers properly organized
-- ✅ **Domain Layer**: Book entity with business logic implemented
-- ✅ **Infrastructure**: Entity Framework Core setup with SQL Server
-- ✅ **Application Layer**: DTOs for data transfer operations
+- ✅ **Domain Layer**: Book and User entities with comprehensive business logic
+- ✅ **Infrastructure**: Entity Framework Core setup with SQL Server and User support
+- ✅ **Application Layer**: DTOs with comprehensive validation attributes
 - ✅ **API Foundation**: ASP.NET Core Web API with Swagger documentation
+- ✅ **Input Validation**: DataAnnotations validation implemented across DTOs
+- ✅ **Role-Based Design**: User roles (User/Admin) prepared for authorization
 - 🚧 **Authentication**: JWT implementation in progress
 - 🚧 **CRUD Operations**: Book management endpoints in development
 - 🚧 **Order System**: Order management features planned
@@ -81,6 +83,7 @@ Users
 ├── PasswordHash (string)
 └── Role (enum: User, Admin)
 ```
+**Status**: ✅ **Entity Implemented** - Domain entity and DbSet configured
 
 ### Books
 ```sql
@@ -91,6 +94,7 @@ Books
 ├── Price (decimal)
 └── StockQuantity (int)
 ```
+**Status**: ✅ **Entity Enhanced** - Business logic methods (AddStock, RemoveStock) and validation added
 
 ### Orders
 ```sql
@@ -101,6 +105,7 @@ Orders
 ├── Quantity (int)
 └── OrderDate (DateTime)
 ```
+**Status**: 🚧 **Planned** - Entity and relationships to be implemented
 
 ## 🚽️ Getting Started
 
@@ -191,11 +196,14 @@ Authorization: Bearer <jwt_token>
 - [x] Clean Architecture implementation
 - [x] Domain entities and DTOs
 - [x] Database context setup
+- [x] Enhanced domain entities (User, Book with business logic)
+- [x] Comprehensive DTO validation with DataAnnotations
+- [x] Role-based access control foundation (User/Admin roles)
+- [x] Improved encapsulation and business methods
 - [ ] JWT Authentication implementation
 - [ ] User registration and login endpoints
-- [ ] Books CRUD operations
-- [ ] Order management system
-- [ ] Input validation and error handling
+- [ ] Books CRUD operations with controllers
+- [ ] Order entity and management system
 - [ ] Pagination and filtering
 - [ ] Database seeding with sample data
 - [ ] Comprehensive unit tests
