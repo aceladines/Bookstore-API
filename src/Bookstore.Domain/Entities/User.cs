@@ -11,7 +11,7 @@ namespace Bookstore.Domain.Entities
         public Role Role { get; private set; }
 
 #pragma warning disable CS8618 
-        public User() { }
+        private User() { }
 #pragma warning restore CS8618
 
         public User(string username, string email, string passwordHash, Role role)

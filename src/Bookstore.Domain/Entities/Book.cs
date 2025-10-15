@@ -9,7 +9,7 @@
         public int StockQuantity { get; private set; }
 
 #pragma warning disable CS8618 
-        public Book() { } // EF Core constructor
+        private Book() { } // EF Core constructor
 #pragma warning restore CS8618
 
 
