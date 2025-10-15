@@ -19,9 +19,9 @@ This project is being developed incrementally to sharpen .NET development skills
 - ✅ **API Foundation**: ASP.NET Core Web API with Swagger documentation
 - ✅ **Input Validation**: DataAnnotations validation implemented for Book DTOs
 - ✅ **Role-Based Design**: User roles (User/Admin) prepared for authorization
+- ✅ **Order System**: Order and OrderItem entities implemented with business logic
 - 🚧 **Authentication**: JWT implementation in progress
 - 🚧 **CRUD Operations**: Book management endpoints in development
-- 🚧 **Order System**: Order management features planned
 
 **Note**: Some features mentioned in this README are planned but not yet implemented. Check the [Upcoming Features](#-upcoming-features) section for the current roadmap.
 
@@ -101,11 +101,18 @@ Books
 Orders
 ├── Id (Guid, PK)
 ├── UserId (Guid, FK)
+├── TotalAmount (decimal, calculated)
+├── CreatedAt (DateTime)
+└── UpdatedAt (DateTime)
+
+OrderItems
+├── Id (Guid, PK)
 ├── BookId (Guid, FK)
 ├── Quantity (int)
-└── OrderDate (DateTime)
+├── BookPrice (decimal)
+└── SubTotal (decimal, calculated)
 ```
-**Status**: 🚧 **Planned** - Entity and relationships to be implemented
+**Status**: ✅ **Entity Implemented** - Order and OrderItem domain entities with business logic and EF Core configuration
 
 ## 🚽️ Getting Started
 
@@ -200,11 +207,12 @@ Authorization: Bearer <jwt_token>
 - [x] Book DTO validation with DataAnnotations (UpdateBookDto, PartialUpdateBookDto)
 - [x] Role-based access control foundation (User/Admin roles)
 - [x] Improved encapsulation and business methods
+- [x] Order entity and management system (Order, OrderItem with business logic)
+- [x] Entity Framework Core configuration for Order relationships
 - [ ] JWT Authentication implementation
 - [ ] Authentication DTOs with validation (RegisterDto, LoginDto)
 - [ ] User registration and login endpoints
 - [ ] Books CRUD operations with controllers
-- [ ] Order entity and management system
 - [ ] Pagination and filtering
 - [ ] Database seeding with sample data
 - [ ] Comprehensive unit tests
